@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <link rel="icon" href="aki.png.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <span class="logo-text">The Writer's Guild</span>
+        <!-- Text next to the logo -->
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="slideshow-container">
+      <!-- Slide 1 -->
+      <div class="slides fade">
+        <img src="./img/Footnote.png" alt="Slide 1" />
+        <div class="caption">The Beginning</div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slides fade">
+        <img src="./img/3.png" alt="Slide 2" />
+        <div class="caption">Unexpected Fate</div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slides fade">
+        <img src="./img/2.png" alt="Slide 3" />
+        <div class="caption">The Downfall</div>
+      </div>
+    </div>
+
+    <!-- Dots for navigation -->
+    <div class="dots-container">
+      <span class="dot" onclick="setSlide(1)"></span>
+      <span class="dot" onclick="setSlide(2)"></span>
+      <span class="dot" onclick="setSlide(3)"></span>
+    </div>
+
+    <script>
+      let slideIndex = 0; // Start with the first slide
+      autoShowSlides(); // Call the automatic slideshow function
+
+      // Function to display slides automatically
+      function autoShowSlides() {
+        const slides = document.querySelectorAll(".slides");
+        const dots = document.querySelectorAll(".dot");
+
+        slides.forEach((slide) => (slide.style.display = "none")); // Hide all slides
+        dots.forEach(
+          (dot) => (dot.className = dot.className.replace(" active", ""))
+        ); // Remove active dots
+
+        slideIndex++; // Increment slide index
+
+        if (slideIndex > slides.length) slideIndex = 1; // Loop back to the first slide
+        slides[slideIndex - 1].style.display = "block"; // Show current slide
+        dots[slideIndex - 1].className += " active"; // Highlight the active dot
+
+        setTimeout(autoShowSlides, 5000); // Change slide every 5 seconds (adjust time if needed)
+      }
+
+      // Function to set a specific slide when a dot is clicked
+      function setSlide(n) {
+        slideIndex = n - 1; // Set the slide index to the clicked dot
+        autoShowSlides(); // Immediately show the selected slide
+      }
+    </script>
+
+    <main>
+      <h1>Featured Video of Footnote of Youth</h1>
+
+      <p class="para2"></p>
+      <video src="21srt (1).mp4" controls width="1000px" height="500px"></video>
+    </main>
+
+    <div class="description2">
+      <h1>Explanation</h1>
+      <p class="para3">
+        This video shows Dodong's journey in "Footnote of Youth," focusing on
+        his early marriage and the challenges that come with it. It highlights
+        how Dodong, in his youthful idealism, rushes into marriage and then
+        faces the unexpected burdens of responsibility. The video shows the
+        tough realities of growing up too fast and dealing with the heavy
+        responsibilities that come with commitment. It also emphasizes how such
+        decisions early on do not only affect the person who made them but also
+        his family and future.
+      </p>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section subscribe-section">
+          <h4>Subscribe</h4>
+          <form action="#">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+            <li>
+              <a href="https://instagram.com" target="_blank">Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

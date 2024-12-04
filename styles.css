@@ -1,0 +1,337 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+  
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This keeps the logo on the left */
+    background-color: #261b6d;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70px; /* Adjust the size of the image */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+    color: white; /* Main text color for elegance */
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.23); /* Bold black outline for clarity */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.338); /* Soft shadow for subtle depth */
+    font-family: 'Georgia', serif; /* Elegant font style */
+    font-size: 2rem; /* Adjust size as needed */ 
+}
+
+nav {
+    position: absolute; /* Position it in the center of the header */
+    left: 50%;
+    transform: translateX(-50%); /* This will center the nav horizontally */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px; /* Adds space between nav items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.t1 {
+    font-size: 34px;
+
+}
+
+.t2 {
+    font-family: 'Montserrat', sans-serif; /* Font for main heading */
+    font-size: 40px; /* Size for the title */
+    font-weight: bold;
+    text-align: center; /* Title aligned in the center */
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.text1 {
+    margin-right: 300px;
+    margin-left: 300px;
+}
+
+/* Footer styles */
+.footer {
+    margin-top: 100px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1 1 300px; /* Evenly distributes the sections */
+    margin: 10px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #00ccff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #00ccff;
+}
+
+/* Subscribe section styling */
+.subscribe-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form elements */
+    justify-content: center; /* Align to center */
+}
+
+.subscribe-section input[type="email"] {
+    padding: 10px;
+    margin-bottom: 15px; /* Add margin to separate input and button */
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.subscribe-section button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00ccff;
+    color: #fff;
+    font-size: 16px; /* Increased font size */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease; /* Added transform for scaling */
+    width: 100%;
+    max-width: 300px; /* Make button same width as input */
+}
+
+.subscribe-section button:hover {
+    background-color: #0099cc;
+    transform: scale(1.05); /* Button grows slightly on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+    }
+}
+
+.pic1 {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #000; /* Adjust thickness and color of the border */
+    outline: 3px solid #823535; /* Optional: Add an outline outside the border */
+    border-radius: 10px; /* Optional: Rounds the corners */
+}
+
+.KSI {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.group5 h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.p1 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px; /* Spacing between paragraphs */
+    color: #333;
+    text-align: justify;
+}
+
+.p3 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px; /* Spacing between paragraphs */
+    color: #333;
+    text-align: justify;
+}
+
+.footnote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the container has height */
+    text-align: center; /* Fallback for non-flex layouts */
+  }
+
+  .note {
+    max-width: 70%; /* Adjust for responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px;
+  }
+
+  .description2 {
+    text-align: center;
+  }
+
+  .para3{
+    font-size: 23px;
+    line-height: 1.5;
+    margin-bottom: 20px; /* Spacing between paragraphs */
+    color: #333;
+    text-align: justify;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+
+  .fort {
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+
+  .n1 {
+    text-align: justify;
+    margin-right: 200px;
+    margin-left: 200px;
+    font-family: 'Roboto', sans-serif; /* Change to 'Lora' or 'Open Sans' if desired */
+    font-size: 1.2rem; /* Adjust font size as needed */
+    font-weight: 400;
+    line-height: 1.6; /* Better readability */
+    color: #333; /* Neutral dark color */
+    padding: 0 20px; /* Optional horizontal padding */
+    margin-top: 50px;
+  }
+/* Style for the slideshow container */
+
+ /* Reset body and html spacing */
+ html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Individual slides */
+.slides {
+    display: none;
+    position: relative;
+}
+
+.slides img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Caption for each slide */
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Dots navigation */
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #717171;
+}
